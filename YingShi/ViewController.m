@@ -39,7 +39,8 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    self.srcURL = @"http://www.pz5918.com/wap";
+    //self.srcURL = @"http://www.pz5918.com/wap";
+    self.srcURL = @"https://m.tianxiaxinyong.com/cooperation/crp-op/index.html?channel=NCtQdE8za3lrUDczdXdoTCtSYytydz09&appId=305801010&bizContent=OWmLxk9FkOtqRbOumoubjfCLsKTMOLlPmuEFcumPjr8%3D&charset=utf-8&format=json&randomKey=U7FSMXbGuk3N%2BZ6DjpHw%2BsXkQWMwvcBpvGNf0DLgFOxg%2BGI%2Bgbz%2FuqmT%2BvJtE1lfluMN0yLg4Kc7bMBmY45IwqYwAHtjk2ZT22%2B714Rd%2FdKg88tO5wAwSAOuvgLwQ%2F8IMXjTmdB65ClJKrzCicdKORwbeg%2Bc%2Bf4OZU3RMNlOMYQ%3D&sign=XDzTYwd5Y%2BHd7EiGeM1vChsqrj0Njcgb0wzHFUwOOeNC4Ziw2d3EfJozeloKRw6oZmBpfuTY%2BIrVmcab7t4TylV8C28p8mV3YhHf1NCMXbCCxRrSiOSdN8O4n%2BCqzVOwPItcTP446BycxkmYaNP%2FYp3iWBc%2FhOVhXnmuc2RmOV0%3D&signType=RSA&timestamp=1560417461969&version=3.0";
     //self.srcURL = @"https://static.maimaiti.cn/wallet/cash/index/index.html";
 
     self.view.backgroundColor = [UIColor whiteColor];
